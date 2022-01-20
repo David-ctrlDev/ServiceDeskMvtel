@@ -1,0 +1,9 @@
+.main-footer-container {
+    position: fixed;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(179, 179, 179);
+    top: 95%;
+}

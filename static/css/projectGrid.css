@@ -1,0 +1,44 @@
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 100em;
+        justify-content: center;
+        margin: 10%;
+        top: 20%
+    }
+    
+    .project-grid-container {
+        height: 15em;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: inline-block;
+        text-align: center;
+        color: rgb(71, 83, 100);
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .project-logo {
+        margin-top: 2%;
+        width: 80%;
+        height: 80%;
+        border-radius: 10%;
+        box-shadow: 5px 5px 10px #54565e, -5px -5px 10px #ffffff;
+        transition: 1s;
+    }
+    
+    .project-logo:hover {
+        transform: scale(1.1)
+    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin-top: 40%;
+        }
+    }

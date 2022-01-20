@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/sideMenu.css' %}">
+    <div class = "main-side-menu">
+        <nav class= "main-nav-side"> 
+           <ul >
+                <a href="{% url 'home' %}"> <li>Inicio</li></a>
+                <a href="{% url 'home' %}"> <li>Inicio</li></a>
+                <a href="{% url 'home' %}"> <li>Inicio</li></a>
+                <a href="{% url 'home' %}"> <li>Inicio</li></a>
+                </ul>   
+          
+        </nav>
+    </div>
+{% endblock %}

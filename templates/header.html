@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/css/header.css' %}">
+<div class = "main-header-container">
+    <div class ="main-header">
+        <img  alt= "user-profile-image"class= "user-icon"src= "{{user.profile.picture.url}}">
+        <h2 id="header-title">Hola {{ user.first_name }} Bienvenido al Servicedesk!</h2>
+        <a class = "logout-link"href="{% url 'logout' %}"><img class= "logout-icon"src= "{%static '/assets/icons/icons8-locked-inside-50.png'%}"><span>Cerrar Sesión</span></a>
+        <h3 id="header-subtitle">{{user.profile.position}}</h3>
+    </div>
+    
+    <img alt="Mvtel logo iamge" class= "header-logo"src= "{%static '/assets/images/mvtel-logo.png'%}">
+</div>
+
+
+{% endblock %}

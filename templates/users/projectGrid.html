@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/projectGrid.css' %}">
+    <div class="wrapper">   
+    {%for i in projects%}
+        <div class="project-grid-container">
+            <h2 class= "project-name">{{i.projectName}}</h2>
+            <a href="#"><img class= "project-logo"src= "{% static '/assets/images/' %}{{i.logo}}"></a>
+         
+        </div>
+    {%endfor%}
+    
+    </div>
+
+{% endblock %}

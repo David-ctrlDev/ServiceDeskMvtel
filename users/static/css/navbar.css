@@ -1,0 +1,57 @@
+    .main-navbar {
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 6em;
+        z-index: 99;
+    }
+    
+    .main-navbar ul {
+        justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .main-navbar ul li {
+        list-style: none;
+        display: inline;
+        color: rgb(239, 123, 16);
+        text-align: center;
+        padding: 1%;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        width: 15%;
+    }
+    
+    .main-navbar ul li a {
+        text-decoration: none;
+        width: 80%;
+        color: rgb(71, 83, 100);
+        padding: 2%;
+        display: block;
+    }
+    
+    .main-navbar ul li a span {
+        display: none;
+    }
+    
+    .main-navbar ul li :hover {
+        background-color: rgb(239, 123, 16);
+        color: #FFFF;
+        border-radius: 10px;
+    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        .main-navbar ul li a span {
+            position: relative;
+            display: block;
+            width: fit-content;
+            background-color: rgb(239, 123, 16);
+            align-self: center;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+    }

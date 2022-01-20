@@ -1,0 +1,49 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/css/table.css' %}">
+<link rel="stylesheet" href= "https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.18/datatables.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+
+<div class = "main-table-container">
+    <table id="mydatatable" class="cell-border compact stripe order-column responsive nowrap hover" "width:100%" "height:900px">
+      <thead>
+        <tr class="header">
+          <th >ID Requerimiento</th>
+          <th >Requerimiento</th>
+          <th >Estado</th>
+          <th >Fecha Solicitud</th>
+          <th >Fecha Vencimiento</th>
+        </tr>
+      </thead>
+      <tfoot>
+      </tfoot>
+        {%for i in services%}
+        <tr>
+          <td data-order="1479686400">{{i.id}}</td>
+          <td><a href="#">{{i.description}}</td>
+          <td>{{i.id}}</td>
+          <td>{{i.created}}</td>
+          <td>{{i.description}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+      
+    <script>
+      $(document).ready(function() {
+        var table = $('#mydatatable').DataTable();
+         
+        
+    } );
+    </script>
+      
+    </div>
+{% endblock %} 

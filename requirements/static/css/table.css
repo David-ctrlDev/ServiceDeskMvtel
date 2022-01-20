@@ -1,0 +1,24 @@
+    .main-table-container {
+        color: rgb(71, 83, 100);
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 15%;
+        justify-content: center;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 1%;
+        width: 100%;
+        position: relative;
+    }
+    
+    th {
+        background-color: papayawhip;
+    }
+    
+    #mydatatable_wrapper {
+        width: 60%;
+        cursor: pointer;
+    }
+    
+    a {
+        text-decoration: none;
+    }

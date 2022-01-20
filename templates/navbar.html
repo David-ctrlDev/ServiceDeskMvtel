@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div  class="main-nav-container">
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+
+    <nav>
+        <div class = "main-navbar">          
+            <ul class = "hamburger-menu-list">
+                <li><a class="nav-bar-btn"href="{% url 'home' %}">Inicio</a></li>
+                <li><a class="nav-bar-btn" href="{% url 'services' %}" >Servicios</a></li>
+                <li><a class="nav-bar-btn" href="#" class="active">Incidentes</a></li>
+                <li><a class="nav-bar-btn" href="#" class="active">Cambios</a></li>
+                {%if user.profile.Sdktype == 1%}
+                <li><a href="{% url 'newservices'%}"><span class= "home-icon"><img src="{% static '/assets/icons/home-page-icon.svg' %}"></span></a><span class="tooltip">Registra una nueva solicitud de Servicio!</span></li>
+                
+                <li><a href="{% url 'home' %}"><span class= "home-icon"><img src="{% static '/assets/icons/home-page-icon.svg' %}"></span></a></li>
+
+                {%endif%}
+            </ul>   
+        </div>
+    </nav>
+</div>
+{% endblock %}

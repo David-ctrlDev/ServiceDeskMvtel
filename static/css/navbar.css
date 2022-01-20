@@ -1,0 +1,79 @@
+.main-navbar {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 6em;
+    z-index: 99;
+}
+
+.main-navbar ul {
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.main-navbar ul li {
+    list-style: none;
+    display: inline;
+    color: rgb(239, 123, 16);
+    text-align: center;
+    padding: 1%;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    width: 15%;
+}
+
+.main-navbar ul li a {
+    text-decoration: none;
+    width: 30%;
+    color: rgb(71, 83, 100);
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+
+.main-navbar ul li .nav-bar-btn:hover {
+    background-color: rgb(239, 123, 16);
+    border-radius: 25px;
+    height: 1.5em;
+    display: block;
+    width: fit-content;
+    padding: 2%;
+}
+
+.main-navbar ul li a span {
+    display: block;
+    background-color: rgb(239, 123, 16);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .main-navbar ul li a span {
+        position: relative;
+        display: block;
+        width: fit-content;
+        background-color: rgb(239, 123, 16);
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background-color: rgb(175, 171, 171);
+    top: 50px;
+    right: 350px;
+    width: 15%;
+    height: 60%;
+    opacity: 1;
+    border-radius: 25px;
+}
+
+.main-navbar ul li:hover .tooltip {
+    display: flex;
+}

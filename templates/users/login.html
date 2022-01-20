@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+    {% block title %}Login{% endblock %} 
+    
+    {% block content %}  {% load static %}
+
+<link rel="stylesheet" href="{% static '/css/usersLogin.css' %}">
+<div class="container" id="container">
+    <form method="post" action="{% url 'login' %}">
+        {%csrf_token%}
+        <h2>Login</h2>
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+        {%if error%}
+            <p>{{error}}</p>
+        {%endif%}
+    </form>
+    <div class="right_panel" id="right_panel">
+        <h2>Bienvenido al Servicedesk de Mvtel</h2>
+        <span>Dejando una linda huella en cada una de nuestras acciones</span>
+    </div>
+</div>
+
+
+
+{% endblock %}
